@@ -15,3 +15,4 @@ Hay tres niveles seleccionables: «El despertar», «La cantera» y «Cielo elé
 ## Física
 
 Cada bloque mide 48 píxeles. Velocidad horizontal: 420 px/s (8,75 bloques/s). Impulso vertical: 720 px/s. Gravedad: 2350 px/s². La parábola ideal alcanza 110,3 px (2,30 bloques) y 257,4 px (5,36 bloques) de recorrido horizontal. Es una aproximación jugable al cubo de Geometry Dash a velocidad normal, no una medición certificada ni una reproducción exacta de su física. El escenario está dibujado por código.
+
