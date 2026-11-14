@@ -1,0 +1,1124 @@
+[gd_scene format=3 uid="uid://dyeypqwgej8xf"]
+
+[ext_resource type="Script" uid="uid://c0puv8alk3h0u" path="res://main.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://c7tsojpvx8abg" path="res://wolf.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://b4hjk73n4wt85" path="res://nave.png" id="3"]
+[ext_resource type="PackedScene" path="res://nivel2.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://nivel3.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://portal.tscn" id="6"]
+
+[sub_resource type="RectangleShape2D" id="spike"]
+size = Vector2(30, 27)
+
+[sub_resource type="RectangleShape2D" id="crate"]
+size = Vector2(40, 38)
+
+[node name="WolfDash" type="Node2D" unique_id=241721693]
+script = ExtResource("1")
+
+[node name="Cielo" type="ColorRect" parent="." unique_id=1503721492]
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+color = Color(0.53, 0.72, 0.74, 1)
+
+[node name="Arboles" type="Node2D" parent="." unique_id=1012078376]
+
+[node name="Arbol0" type="Node2D" parent="Arboles" unique_id=153643567]
+position = Vector2(0, 450)
+
+[node name="Tronco" type="Polygon2D" parent="Arboles/Arbol0" unique_id=890556813]
+color = Color(0.39, 0.28, 0.2, 1)
+polygon = PackedVector2Array(24, -80, 44, -80, 44, 90, 24, 90)
+
+[node name="Copa" type="Polygon2D" parent="Arboles/Arbol0" unique_id=1773344072]
+color = Color(0.2, 0.43, 0.33, 1)
+polygon = PackedVector2Array(0, -125, 72, -125, 72, -75, 0, -75)
+
+[node name="CopaAlta" type="Polygon2D" parent="Arboles/Arbol0" unique_id=2101825170]
+color = Color(0.3, 0.51, 0.39, 1)
+polygon = PackedVector2Array(12, -158, 60, -158, 60, -125, 12, -125)
+
+[node name="Arbol1" type="Node2D" parent="Arboles" unique_id=518579598]
+position = Vector2(150, 475)
+
+[node name="Tronco" type="Polygon2D" parent="Arboles/Arbol1" unique_id=288530173]
+color = Color(0.39, 0.28, 0.2, 1)
+polygon = PackedVector2Array(24, -80, 44, -80, 44, 90, 24, 90)
+
+[node name="Copa" type="Polygon2D" parent="Arboles/Arbol1" unique_id=1833979517]
+color = Color(0.2, 0.43, 0.33, 1)
+polygon = PackedVector2Array(0, -125, 72, -125, 72, -75, 0, -75)
+
+[node name="CopaAlta" type="Polygon2D" parent="Arboles/Arbol1" unique_id=1691153138]
+color = Color(0.3, 0.51, 0.39, 1)
+polygon = PackedVector2Array(12, -158, 60, -158, 60, -125, 12, -125)
+
+[node name="Arbol2" type="Node2D" parent="Arboles" unique_id=1954274423]
+position = Vector2(300, 500)
+
+[node name="Tronco" type="Polygon2D" parent="Arboles/Arbol2" unique_id=987564266]
+color = Color(0.39, 0.28, 0.2, 1)
+polygon = PackedVector2Array(24, -80, 44, -80, 44, 90, 24, 90)
+
+[node name="Copa" type="Polygon2D" parent="Arboles/Arbol2" unique_id=899848409]
+color = Color(0.2, 0.43, 0.33, 1)
+polygon = PackedVector2Array(0, -125, 72, -125, 72, -75, 0, -75)
+
+[node name="CopaAlta" type="Polygon2D" parent="Arboles/Arbol2" unique_id=2006794807]
+color = Color(0.3, 0.51, 0.39, 1)
+polygon = PackedVector2Array(12, -158, 60, -158, 60, -125, 12, -125)
+
+[node name="Arbol3" type="Node2D" parent="Arboles" unique_id=1164433095]
+position = Vector2(450, 450)
+
+[node name="Tronco" type="Polygon2D" parent="Arboles/Arbol3" unique_id=673350494]
+color = Color(0.39, 0.28, 0.2, 1)
+polygon = PackedVector2Array(24, -80, 44, -80, 44, 90, 24, 90)
+
+[node name="Copa" type="Polygon2D" parent="Arboles/Arbol3" unique_id=1149821459]
+color = Color(0.2, 0.43, 0.33, 1)
+polygon = PackedVector2Array(0, -125, 72, -125, 72, -75, 0, -75)
+
+[node name="CopaAlta" type="Polygon2D" parent="Arboles/Arbol3" unique_id=689861896]
+color = Color(0.3, 0.51, 0.39, 1)
+polygon = PackedVector2Array(12, -158, 60, -158, 60, -125, 12, -125)
+
+[node name="Arbol4" type="Node2D" parent="Arboles" unique_id=1216100187]
+position = Vector2(600, 475)
+
+[node name="Tronco" type="Polygon2D" parent="Arboles/Arbol4" unique_id=1353624698]
+color = Color(0.39, 0.28, 0.2, 1)
+polygon = PackedVector2Array(24, -80, 44, -80, 44, 90, 24, 90)
+
+[node name="Copa" type="Polygon2D" parent="Arboles/Arbol4" unique_id=353435623]
+color = Color(0.2, 0.43, 0.33, 1)
+polygon = PackedVector2Array(0, -125, 72, -125, 72, -75, 0, -75)
+
+[node name="CopaAlta" type="Polygon2D" parent="Arboles/Arbol4" unique_id=1075998865]
+color = Color(0.3, 0.51, 0.39, 1)
+polygon = PackedVector2Array(12, -158, 60, -158, 60, -125, 12, -125)
+
+[node name="Arbol5" type="Node2D" parent="Arboles" unique_id=2109943060]
+position = Vector2(750, 500)
+
+[node name="Tronco" type="Polygon2D" parent="Arboles/Arbol5" unique_id=699116197]
+color = Color(0.39, 0.28, 0.2, 1)
+polygon = PackedVector2Array(24, -80, 44, -80, 44, 90, 24, 90)
+
+[node name="Copa" type="Polygon2D" parent="Arboles/Arbol5" unique_id=885253103]
+color = Color(0.2, 0.43, 0.33, 1)
+polygon = PackedVector2Array(0, -125, 72, -125, 72, -75, 0, -75)
+
+[node name="CopaAlta" type="Polygon2D" parent="Arboles/Arbol5" unique_id=434610882]
+color = Color(0.3, 0.51, 0.39, 1)
+polygon = PackedVector2Array(12, -158, 60, -158, 60, -125, 12, -125)
+
+[node name="Arbol6" type="Node2D" parent="Arboles" unique_id=1491446636]
+position = Vector2(900, 450)
+
+[node name="Tronco" type="Polygon2D" parent="Arboles/Arbol6" unique_id=769892714]
+color = Color(0.39, 0.28, 0.2, 1)
+polygon = PackedVector2Array(24, -80, 44, -80, 44, 90, 24, 90)
+
+[node name="Copa" type="Polygon2D" parent="Arboles/Arbol6" unique_id=1933577511]
+color = Color(0.2, 0.43, 0.33, 1)
+polygon = PackedVector2Array(0, -125, 72, -125, 72, -75, 0, -75)
+
+[node name="CopaAlta" type="Polygon2D" parent="Arboles/Arbol6" unique_id=1323807205]
+color = Color(0.3, 0.51, 0.39, 1)
+polygon = PackedVector2Array(12, -158, 60, -158, 60, -125, 12, -125)
+
+[node name="Arbol7" type="Node2D" parent="Arboles" unique_id=971889848]
+position = Vector2(1050, 475)
+
+[node name="Tronco" type="Polygon2D" parent="Arboles/Arbol7" unique_id=1041239750]
+color = Color(0.39, 0.28, 0.2, 1)
+polygon = PackedVector2Array(24, -80, 44, -80, 44, 90, 24, 90)
+
+[node name="Copa" type="Polygon2D" parent="Arboles/Arbol7" unique_id=1003998797]
+color = Color(0.2, 0.43, 0.33, 1)
+polygon = PackedVector2Array(0, -125, 72, -125, 72, -75, 0, -75)
+
+[node name="CopaAlta" type="Polygon2D" parent="Arboles/Arbol7" unique_id=1387651596]
+color = Color(0.3, 0.51, 0.39, 1)
+polygon = PackedVector2Array(12, -158, 60, -158, 60, -125, 12, -125)
+
+[node name="Arbol8" type="Node2D" parent="Arboles" unique_id=1741759944]
+position = Vector2(1200, 500)
+
+[node name="Tronco" type="Polygon2D" parent="Arboles/Arbol8" unique_id=1255540926]
+color = Color(0.39, 0.28, 0.2, 1)
+polygon = PackedVector2Array(24, -80, 44, -80, 44, 90, 24, 90)
+
+[node name="Copa" type="Polygon2D" parent="Arboles/Arbol8" unique_id=137022085]
+color = Color(0.2, 0.43, 0.33, 1)
+polygon = PackedVector2Array(0, -125, 72, -125, 72, -75, 0, -75)
+
+[node name="CopaAlta" type="Polygon2D" parent="Arboles/Arbol8" unique_id=502878407]
+color = Color(0.3, 0.51, 0.39, 1)
+polygon = PackedVector2Array(12, -158, 60, -158, 60, -125, 12, -125)
+
+[node name="Arbol9" type="Node2D" parent="Arboles" unique_id=1394628311]
+position = Vector2(1350, 450)
+
+[node name="Tronco" type="Polygon2D" parent="Arboles/Arbol9" unique_id=433021658]
+color = Color(0.39, 0.28, 0.2, 1)
+polygon = PackedVector2Array(24, -80, 44, -80, 44, 90, 24, 90)
+
+[node name="Copa" type="Polygon2D" parent="Arboles/Arbol9" unique_id=195159243]
+color = Color(0.2, 0.43, 0.33, 1)
+polygon = PackedVector2Array(0, -125, 72, -125, 72, -75, 0, -75)
+
+[node name="CopaAlta" type="Polygon2D" parent="Arboles/Arbol9" unique_id=1821590121]
+color = Color(0.3, 0.51, 0.39, 1)
+polygon = PackedVector2Array(12, -158, 60, -158, 60, -125, 12, -125)
+
+[node name="Arbol10" type="Node2D" parent="Arboles" unique_id=1795724401]
+position = Vector2(1500, 475)
+
+[node name="Tronco" type="Polygon2D" parent="Arboles/Arbol10" unique_id=1202369184]
+color = Color(0.39, 0.28, 0.2, 1)
+polygon = PackedVector2Array(24, -80, 44, -80, 44, 90, 24, 90)
+
+[node name="Copa" type="Polygon2D" parent="Arboles/Arbol10" unique_id=2877576]
+color = Color(0.2, 0.43, 0.33, 1)
+polygon = PackedVector2Array(0, -125, 72, -125, 72, -75, 0, -75)
+
+[node name="CopaAlta" type="Polygon2D" parent="Arboles/Arbol10" unique_id=109118965]
+color = Color(0.3, 0.51, 0.39, 1)
+polygon = PackedVector2Array(12, -158, 60, -158, 60, -125, 12, -125)
+
+[node name="Arbol11" type="Node2D" parent="Arboles" unique_id=2050620935]
+position = Vector2(1650, 500)
+
+[node name="Tronco" type="Polygon2D" parent="Arboles/Arbol11" unique_id=1766297595]
+color = Color(0.39, 0.28, 0.2, 1)
+polygon = PackedVector2Array(24, -80, 44, -80, 44, 90, 24, 90)
+
+[node name="Copa" type="Polygon2D" parent="Arboles/Arbol11" unique_id=1536247608]
+color = Color(0.2, 0.43, 0.33, 1)
+polygon = PackedVector2Array(0, -125, 72, -125, 72, -75, 0, -75)
+
+[node name="CopaAlta" type="Polygon2D" parent="Arboles/Arbol11" unique_id=801931640]
+color = Color(0.3, 0.51, 0.39, 1)
+polygon = PackedVector2Array(12, -158, 60, -158, 60, -125, 12, -125)
+
+[node name="Arbol12" type="Node2D" parent="Arboles" unique_id=812273985]
+position = Vector2(1800, 450)
+
+[node name="Tronco" type="Polygon2D" parent="Arboles/Arbol12" unique_id=1806157956]
+color = Color(0.39, 0.28, 0.2, 1)
+polygon = PackedVector2Array(24, -80, 44, -80, 44, 90, 24, 90)
+
+[node name="Copa" type="Polygon2D" parent="Arboles/Arbol12" unique_id=1335416672]
+color = Color(0.2, 0.43, 0.33, 1)
+polygon = PackedVector2Array(0, -125, 72, -125, 72, -75, 0, -75)
+
+[node name="CopaAlta" type="Polygon2D" parent="Arboles/Arbol12" unique_id=2053674425]
+color = Color(0.3, 0.51, 0.39, 1)
+polygon = PackedVector2Array(12, -158, 60, -158, 60, -125, 12, -125)
+
+[node name="Arbol13" type="Node2D" parent="Arboles" unique_id=626270297]
+position = Vector2(1950, 475)
+
+[node name="Tronco" type="Polygon2D" parent="Arboles/Arbol13" unique_id=921996236]
+color = Color(0.39, 0.28, 0.2, 1)
+polygon = PackedVector2Array(24, -80, 44, -80, 44, 90, 24, 90)
+
+[node name="Copa" type="Polygon2D" parent="Arboles/Arbol13" unique_id=1542679396]
+color = Color(0.2, 0.43, 0.33, 1)
+polygon = PackedVector2Array(0, -125, 72, -125, 72, -75, 0, -75)
+
+[node name="CopaAlta" type="Polygon2D" parent="Arboles/Arbol13" unique_id=1022320290]
+color = Color(0.3, 0.51, 0.39, 1)
+polygon = PackedVector2Array(12, -158, 60, -158, 60, -125, 12, -125)
+
+[node name="Arbol14" type="Node2D" parent="Arboles" unique_id=2042631917]
+position = Vector2(2100, 500)
+
+[node name="Tronco" type="Polygon2D" parent="Arboles/Arbol14" unique_id=2104032965]
+color = Color(0.39, 0.28, 0.2, 1)
+polygon = PackedVector2Array(24, -80, 44, -80, 44, 90, 24, 90)
+
+[node name="Copa" type="Polygon2D" parent="Arboles/Arbol14" unique_id=445250908]
+color = Color(0.2, 0.43, 0.33, 1)
+polygon = PackedVector2Array(0, -125, 72, -125, 72, -75, 0, -75)
+
+[node name="CopaAlta" type="Polygon2D" parent="Arboles/Arbol14" unique_id=760108942]
+color = Color(0.3, 0.51, 0.39, 1)
+polygon = PackedVector2Array(12, -158, 60, -158, 60, -125, 12, -125)
+
+[node name="Mundo" type="Node2D" parent="." unique_id=1092517850]
+
+[node name="Suelo" type="ColorRect" parent="Mundo" unique_id=1423417170]
+offset_top = 570.0
+offset_right = 15200.0
+offset_bottom = 720.0
+mouse_filter = 2
+color = Color(0.44, 0.32, 0.22, 1)
+
+[node name="Hierba" type="ColorRect" parent="Mundo" unique_id=1343196050]
+offset_top = 570.0
+offset_right = 15200.0
+offset_bottom = 584.0
+mouse_filter = 2
+color = Color(0.37, 0.61, 0.31, 1)
+
+[node name="Obstaculos" type="Node2D" parent="Mundo" unique_id=1895242777]
+
+[node name="Pincho0" type="Node2D" parent="Mundo/Obstaculos" unique_id=1768423015]
+position = Vector2(850, 570)
+
+[node name="Punta0" type="Polygon2D" parent="Mundo/Obstaculos/Pincho0" unique_id=1423361321]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 20, -40, 40, 0)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/Pincho0" unique_id=1142988965]
+position = Vector2(20.5, -20)
+shape = SubResource("spike")
+
+[node name="Doble1" type="Node2D" parent="Mundo/Obstaculos" unique_id=292754136]
+position = Vector2(1250, 570)
+
+[node name="Punta0" type="Polygon2D" parent="Mundo/Obstaculos/Doble1" unique_id=688514755]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 20, -40, 40, 0)
+
+[node name="Punta1" type="Polygon2D" parent="Mundo/Obstaculos/Doble1" unique_id=348594287]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(41, 0, 61, -40, 81, 0)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/Doble1" unique_id=904390886]
+position = Vector2(41, -20)
+scale = Vector2(2, 1)
+shape = SubResource("spike")
+
+[node name="Caja2" type="Node2D" parent="Mundo/Obstaculos" unique_id=2145865550]
+position = Vector2(1721, 570)
+
+[node name="Forma" type="Polygon2D" parent="Mundo/Obstaculos/Caja2" unique_id=10362397]
+color = Color(0.61, 0.42, 0.28, 1)
+polygon = PackedVector2Array(0, 0, 48, 0, 48, -47, 0, -47)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/Caja2" unique_id=1239587114]
+position = Vector2(24, -24)
+shape = SubResource("crate")
+
+[node name="Pincho3" type="Node2D" parent="Mundo/Obstaculos" unique_id=622370258]
+position = Vector2(2153, 570)
+
+[node name="Punta0" type="Polygon2D" parent="Mundo/Obstaculos/Pincho3" unique_id=817851294]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 20, -40, 40, 0)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/Pincho3" unique_id=14374912]
+position = Vector2(20.5, -20)
+shape = SubResource("spike")
+
+[node name="Triple4" type="Node2D" parent="Mundo/Obstaculos" unique_id=887229006]
+position = Vector2(2656, 570)
+
+[node name="Punta0" type="Polygon2D" parent="Mundo/Obstaculos/Triple4" unique_id=507264396]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 20, -40, 40, 0)
+
+[node name="Punta1" type="Polygon2D" parent="Mundo/Obstaculos/Triple4" unique_id=45238328]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(41, 0, 61, -40, 81, 0)
+
+[node name="Punta2" type="Polygon2D" parent="Mundo/Obstaculos/Triple4" unique_id=1125163702]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(82, 0, 102, -40, 122, 0)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/Triple4" unique_id=1717102961]
+position = Vector2(61.5, -20)
+scale = Vector2(3, 1)
+shape = SubResource("spike")
+
+[node name="Doble5" type="Node2D" parent="Mundo/Obstaculos" unique_id=2143109044]
+position = Vector2(3120, 570)
+
+[node name="Punta0" type="Polygon2D" parent="Mundo/Obstaculos/Doble5" unique_id=751182653]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 20, -40, 40, 0)
+
+[node name="Punta1" type="Polygon2D" parent="Mundo/Obstaculos/Doble5" unique_id=90884191]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(41, 0, 61, -40, 81, 0)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/Doble5" unique_id=579668977]
+position = Vector2(41, -20)
+scale = Vector2(2, 1)
+shape = SubResource("spike")
+
+[node name="Pincho6" type="Node2D" parent="Mundo/Obstaculos" unique_id=467664267]
+position = Vector2(3545, 570)
+
+[node name="Punta0" type="Polygon2D" parent="Mundo/Obstaculos/Pincho6" unique_id=1715319522]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 20, -40, 40, 0)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/Pincho6" unique_id=1003018449]
+position = Vector2(20.5, -20)
+shape = SubResource("spike")
+
+[node name="Triple7" type="Node2D" parent="Mundo/Obstaculos" unique_id=551355374]
+position = Vector2(4041, 570)
+
+[node name="Punta0" type="Polygon2D" parent="Mundo/Obstaculos/Triple7" unique_id=744536354]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 20, -40, 40, 0)
+
+[node name="Punta1" type="Polygon2D" parent="Mundo/Obstaculos/Triple7" unique_id=192753933]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(41, 0, 61, -40, 81, 0)
+
+[node name="Punta2" type="Polygon2D" parent="Mundo/Obstaculos/Triple7" unique_id=1661752524]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(82, 0, 102, -40, 122, 0)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/Triple7" unique_id=1775557334]
+position = Vector2(61.5, -20)
+scale = Vector2(3, 1)
+shape = SubResource("spike")
+
+[node name="Pincho8" type="Node2D" parent="Mundo/Obstaculos" unique_id=1881827205]
+position = Vector2(4498, 570)
+
+[node name="Punta0" type="Polygon2D" parent="Mundo/Obstaculos/Pincho8" unique_id=2099008626]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 20, -40, 40, 0)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/Pincho8" unique_id=1843896360]
+position = Vector2(20.5, -20)
+shape = SubResource("spike")
+
+[node name="Doble9" type="Node2D" parent="Mundo/Obstaculos" unique_id=1696873251]
+position = Vector2(4916, 570)
+
+[node name="Punta0" type="Polygon2D" parent="Mundo/Obstaculos/Doble9" unique_id=124763823]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 20, -40, 40, 0)
+
+[node name="Punta1" type="Polygon2D" parent="Mundo/Obstaculos/Doble9" unique_id=927031874]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(41, 0, 61, -40, 81, 0)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/Doble9" unique_id=2031768377]
+position = Vector2(41, -20)
+scale = Vector2(2, 1)
+shape = SubResource("spike")
+
+[node name="Caja10" type="Node2D" parent="Mundo/Obstaculos" unique_id=1100180702]
+position = Vector2(5405, 570)
+
+[node name="Forma" type="Polygon2D" parent="Mundo/Obstaculos/Caja10" unique_id=926362237]
+color = Color(0.61, 0.42, 0.28, 1)
+polygon = PackedVector2Array(0, 0, 48, 0, 48, -47, 0, -47)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/Caja10" unique_id=873668807]
+position = Vector2(24, -24)
+shape = SubResource("crate")
+
+[node name="Pincho11" type="Node2D" parent="Mundo/Obstaculos" unique_id=1762875619]
+position = Vector2(5855, 570)
+
+[node name="Punta0" type="Polygon2D" parent="Mundo/Obstaculos/Pincho11" unique_id=2059127239]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 20, -40, 40, 0)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/Pincho11" unique_id=579070593]
+position = Vector2(20.5, -20)
+shape = SubResource("spike")
+
+[node name="Triple12" type="Node2D" parent="Mundo/Obstaculos" unique_id=427946701]
+position = Vector2(6266, 570)
+
+[node name="Punta0" type="Polygon2D" parent="Mundo/Obstaculos/Triple12" unique_id=995506472]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 20, -40, 40, 0)
+
+[node name="Punta1" type="Polygon2D" parent="Mundo/Obstaculos/Triple12" unique_id=1179630408]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(41, 0, 61, -40, 81, 0)
+
+[node name="Punta2" type="Polygon2D" parent="Mundo/Obstaculos/Triple12" unique_id=550581393]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(82, 0, 102, -40, 122, 0)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/Triple12" unique_id=1385658079]
+position = Vector2(61.5, -20)
+scale = Vector2(3, 1)
+shape = SubResource("spike")
+
+[node name="Doble13" type="Node2D" parent="Mundo/Obstaculos" unique_id=321091623]
+position = Vector2(6748, 570)
+
+[node name="Punta0" type="Polygon2D" parent="Mundo/Obstaculos/Doble13" unique_id=1692105049]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 20, -40, 40, 0)
+
+[node name="Punta1" type="Polygon2D" parent="Mundo/Obstaculos/Doble13" unique_id=983032263]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(41, 0, 61, -40, 81, 0)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/Doble13" unique_id=1433960815]
+position = Vector2(41, -20)
+scale = Vector2(2, 1)
+shape = SubResource("spike")
+
+[node name="Pincho14" type="Node2D" parent="Mundo/Obstaculos" unique_id=1846789154]
+position = Vector2(7191, 570)
+
+[node name="Punta0" type="Polygon2D" parent="Mundo/Obstaculos/Pincho14" unique_id=1838137498]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 20, -40, 40, 0)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/Pincho14" unique_id=241872772]
+position = Vector2(20.5, -20)
+shape = SubResource("spike")
+
+[node name="Triple15" type="Node2D" parent="Mundo/Obstaculos" unique_id=464991976]
+position = Vector2(7595, 570)
+
+[node name="Punta0" type="Polygon2D" parent="Mundo/Obstaculos/Triple15" unique_id=529025579]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 20, -40, 40, 0)
+
+[node name="Punta1" type="Polygon2D" parent="Mundo/Obstaculos/Triple15" unique_id=1117394436]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(41, 0, 61, -40, 81, 0)
+
+[node name="Punta2" type="Polygon2D" parent="Mundo/Obstaculos/Triple15" unique_id=1819683816]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(82, 0, 102, -40, 122, 0)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/Triple15" unique_id=1963268971]
+position = Vector2(61.5, -20)
+scale = Vector2(3, 1)
+shape = SubResource("spike")
+
+[node name="Pincho16" type="Node2D" parent="Mundo/Obstaculos" unique_id=1453022822]
+position = Vector2(8070, 570)
+
+[node name="Punta0" type="Polygon2D" parent="Mundo/Obstaculos/Pincho16" unique_id=739361070]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 20, -40, 40, 0)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/Pincho16" unique_id=560065905]
+position = Vector2(20.5, -20)
+shape = SubResource("spike")
+
+[node name="Doble17" type="Node2D" parent="Mundo/Obstaculos" unique_id=2089292730]
+position = Vector2(8506, 570)
+
+[node name="Punta0" type="Polygon2D" parent="Mundo/Obstaculos/Doble17" unique_id=1950608641]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 20, -40, 40, 0)
+
+[node name="Punta1" type="Polygon2D" parent="Mundo/Obstaculos/Doble17" unique_id=1787128204]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(41, 0, 61, -40, 81, 0)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/Doble17" unique_id=151853784]
+position = Vector2(41, -20)
+scale = Vector2(2, 1)
+shape = SubResource("spike")
+
+[node name="Caja18" type="Node2D" parent="Mundo/Obstaculos" unique_id=484826024]
+position = Vector2(9013, 570)
+
+[node name="Forma" type="Polygon2D" parent="Mundo/Obstaculos/Caja18" unique_id=769905361]
+color = Color(0.61, 0.42, 0.28, 1)
+polygon = PackedVector2Array(0, 0, 48, 0, 48, -47, 0, -47)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/Caja18" unique_id=377402824]
+position = Vector2(24, -24)
+shape = SubResource("crate")
+
+[node name="Pincho19" type="Node2D" parent="Mundo/Obstaculos" unique_id=879041149]
+position = Vector2(9481, 570)
+
+[node name="Punta0" type="Polygon2D" parent="Mundo/Obstaculos/Pincho19" unique_id=1682572036]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 20, -40, 40, 0)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/Pincho19" unique_id=406417170]
+position = Vector2(20.5, -20)
+shape = SubResource("spike")
+
+[node name="Triple20" type="Node2D" parent="Mundo/Obstaculos" unique_id=163859674]
+position = Vector2(9910, 570)
+
+[node name="Punta0" type="Polygon2D" parent="Mundo/Obstaculos/Triple20" unique_id=1430325051]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 20, -40, 40, 0)
+
+[node name="Punta1" type="Polygon2D" parent="Mundo/Obstaculos/Triple20" unique_id=1187968404]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(41, 0, 61, -40, 81, 0)
+
+[node name="Punta2" type="Polygon2D" parent="Mundo/Obstaculos/Triple20" unique_id=1231518558]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(82, 0, 102, -40, 122, 0)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/Triple20" unique_id=1295074560]
+position = Vector2(61.5, -20)
+scale = Vector2(3, 1)
+shape = SubResource("spike")
+
+[node name="Doble21" type="Node2D" parent="Mundo/Obstaculos" unique_id=1930435473]
+position = Vector2(10410, 570)
+
+[node name="Punta0" type="Polygon2D" parent="Mundo/Obstaculos/Doble21" unique_id=1079664022]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 20, -40, 40, 0)
+
+[node name="Punta1" type="Polygon2D" parent="Mundo/Obstaculos/Doble21" unique_id=1316438893]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(41, 0, 61, -40, 81, 0)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/Doble21" unique_id=1729907924]
+position = Vector2(41, -20)
+scale = Vector2(2, 1)
+shape = SubResource("spike")
+
+[node name="Pincho22" type="Node2D" parent="Mundo/Obstaculos" unique_id=1129289557]
+position = Vector2(10871, 570)
+
+[node name="Punta0" type="Polygon2D" parent="Mundo/Obstaculos/Pincho22" unique_id=1706897479]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 20, -40, 40, 0)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/Pincho22" unique_id=713394290]
+position = Vector2(20.5, -20)
+shape = SubResource("spike")
+
+[node name="Triple23" type="Node2D" parent="Mundo/Obstaculos" unique_id=1810106103]
+position = Vector2(11293, 570)
+
+[node name="Punta0" type="Polygon2D" parent="Mundo/Obstaculos/Triple23" unique_id=1849054944]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 20, -40, 40, 0)
+
+[node name="Punta1" type="Polygon2D" parent="Mundo/Obstaculos/Triple23" unique_id=624655440]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(41, 0, 61, -40, 81, 0)
+
+[node name="Punta2" type="Polygon2D" parent="Mundo/Obstaculos/Triple23" unique_id=575805281]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(82, 0, 102, -40, 122, 0)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/Triple23" unique_id=225961775]
+position = Vector2(61.5, -20)
+scale = Vector2(3, 1)
+shape = SubResource("spike")
+
+[node name="Pincho24" type="Node2D" parent="Mundo/Obstaculos" unique_id=1426238876]
+position = Vector2(11786, 570)
+
+[node name="Punta0" type="Polygon2D" parent="Mundo/Obstaculos/Pincho24" unique_id=1264784962]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 20, -40, 40, 0)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/Pincho24" unique_id=844998354]
+position = Vector2(20.5, -20)
+shape = SubResource("spike")
+
+[node name="Doble25" type="Node2D" parent="Mundo/Obstaculos" unique_id=240899959]
+position = Vector2(12240, 570)
+
+[node name="Punta0" type="Polygon2D" parent="Mundo/Obstaculos/Doble25" unique_id=1746709677]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 20, -40, 40, 0)
+
+[node name="Punta1" type="Polygon2D" parent="Mundo/Obstaculos/Doble25" unique_id=1533339592]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(41, 0, 61, -40, 81, 0)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/Doble25" unique_id=868809161]
+position = Vector2(41, -20)
+scale = Vector2(2, 1)
+shape = SubResource("spike")
+
+[node name="Caja26" type="Node2D" parent="Mundo/Obstaculos" unique_id=1484230694]
+position = Vector2(12655, 570)
+
+[node name="Forma" type="Polygon2D" parent="Mundo/Obstaculos/Caja26" unique_id=768501798]
+color = Color(0.61, 0.42, 0.28, 1)
+polygon = PackedVector2Array(0, 0, 48, 0, 48, -47, 0, -47)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/Caja26" unique_id=692756010]
+position = Vector2(24, -24)
+shape = SubResource("crate")
+
+[node name="Pincho27" type="Node2D" parent="Mundo/Obstaculos" unique_id=1697291741]
+position = Vector2(13141, 570)
+
+[node name="Punta0" type="Polygon2D" parent="Mundo/Obstaculos/Pincho27" unique_id=102292552]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 20, -40, 40, 0)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/Pincho27" unique_id=1632423483]
+position = Vector2(20.5, -20)
+shape = SubResource("spike")
+
+[node name="Triple28" type="Node2D" parent="Mundo/Obstaculos" unique_id=1916778902]
+position = Vector2(13588, 570)
+
+[node name="Punta0" type="Polygon2D" parent="Mundo/Obstaculos/Triple28" unique_id=525841423]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 20, -40, 40, 0)
+
+[node name="Punta1" type="Polygon2D" parent="Mundo/Obstaculos/Triple28" unique_id=1287807066]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(41, 0, 61, -40, 81, 0)
+
+[node name="Punta2" type="Polygon2D" parent="Mundo/Obstaculos/Triple28" unique_id=912968430]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(82, 0, 102, -40, 122, 0)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/Triple28" unique_id=1250000091]
+position = Vector2(61.5, -20)
+scale = Vector2(3, 1)
+shape = SubResource("spike")
+
+[node name="Doble29" type="Node2D" parent="Mundo/Obstaculos" unique_id=572457947]
+position = Vector2(13996, 570)
+
+[node name="Punta0" type="Polygon2D" parent="Mundo/Obstaculos/Doble29" unique_id=332250535]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 20, -40, 40, 0)
+
+[node name="Punta1" type="Polygon2D" parent="Mundo/Obstaculos/Doble29" unique_id=638434194]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(41, 0, 61, -40, 81, 0)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/Doble29" unique_id=2001439702]
+position = Vector2(41, -20)
+scale = Vector2(2, 1)
+shape = SubResource("spike")
+
+[node name="SierraExtra" type="Node2D" parent="Mundo/Obstaculos" unique_id=1218667327]
+position = Vector2(1800, 570)
+
+[node name="Hoja" type="Polygon2D" parent="Mundo/Obstaculos/SierraExtra" unique_id=1385920915]
+color = Color(0.71, 0.72, 0.67, 1)
+polygon = PackedVector2Array(0, -28, 11, -34, 18, -53, 31, -37, 48, -45, 44, -27, 55, -17, 35, -17, 28, 0, 17, -17, 0, -12, 8, -27)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/SierraExtra" unique_id=149817672]
+position = Vector2(27, -27)
+shape = SubResource("crate")
+
+[node name="TechoExtra" type="Node2D" parent="Mundo/Obstaculos" unique_id=606981196]
+position = Vector2(4550, 0)
+
+[node name="Forma" type="Polygon2D" parent="Mundo/Obstaculos/TechoExtra" unique_id=52081684]
+color = Color(0.25, 0.35, 0.31, 1)
+polygon = PackedVector2Array(0, 0, 100, 0, 100, 305, 0, 305)
+
+[node name="Colision" type="CollisionShape2D" parent="Mundo/Obstaculos/TechoExtra" unique_id=119866625]
+position = Vector2(50, 150)
+scale = Vector2(2.5, 8)
+shape = SubResource("crate")
+
+[node name="PersonajeLobo" type="Sprite2D" parent="Mundo" unique_id=87698158]
+position = Vector2(170, 546)
+scale = Vector2(0.177778, 0.177778)
+texture = ExtResource("2")
+
+[node name="NaveLobo" type="Sprite2D" parent="Mundo" unique_id=1289137498]
+visible = false
+position = Vector2(170, 420)
+scale = Vector2(0.38, 0.38)
+texture = ExtResource("3")
+
+[node name="Portales1" type="Node2D" parent="Mundo" unique_id=1847124789]
+
+[node name="Entrada" parent="Mundo/Portales1" unique_id=1851586992 instance=ExtResource("6")]
+position = Vector2(3800, 430)
+
+[node name="Salida" parent="Mundo/Portales1" unique_id=1768908926 instance=ExtResource("6")]
+position = Vector2(6550, 430)
+activar_nave = false
+
+[node name="Nivel2" parent="Mundo" unique_id=98555611 instance=ExtResource("4")]
+visible = false
+
+[node name="Nivel3" parent="Mundo" unique_id=449233376 instance=ExtResource("5")]
+visible = false
+
+[node name="Interfaz" type="CanvasLayer" parent="." unique_id=1676894077]
+
+[node name="Menu" type="Control" parent="Interfaz" unique_id=1051199996]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+
+[node name="Oscurecer" type="ColorRect" parent="Interfaz/Menu" unique_id=222661346]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+color = Color(0.05, 0.1, 0.11, 0.68)
+
+[node name="Titulo" type="Label" parent="Interfaz/Menu" unique_id=1933297839]
+layout_mode = 0
+offset_top = 130.0
+offset_right = 1280.0
+offset_bottom = 195.0
+theme_override_font_sizes/font_size = 64
+text = "WOLF DASH"
+horizontal_alignment = 1
+
+[node name="Subtitulo" type="Label" parent="Interfaz/Menu" unique_id=742111944]
+layout_mode = 0
+offset_top = 210.0
+offset_right = 1280.0
+offset_bottom = 275.0
+theme_override_font_sizes/font_size = 30
+text = "EL DESPERTAR"
+horizontal_alignment = 1
+
+[node name="VistaPrevia" type="TextureRect" parent="Interfaz/Menu" unique_id=204048803]
+layout_mode = 0
+offset_left = 572.0
+offset_top = 270.0
+offset_right = 708.0
+offset_bottom = 372.0
+texture = ExtResource("2")
+
+[node name="Jugar" type="Button" parent="Interfaz/Menu" unique_id=1963932561]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 390.0
+offset_right = 840.0
+offset_bottom = 444.0
+theme_override_font_sizes/font_size = 24
+text = "JUGAR"
+
+[node name="ElegirLobo" type="Button" parent="Interfaz/Menu" unique_id=523523810]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 520.0
+offset_right = 840.0
+offset_bottom = 574.0
+theme_override_font_sizes/font_size = 24
+text = "ELEGIR LOBO"
+
+[node name="ElegirNivel" type="Button" parent="Interfaz/Menu" unique_id=489877]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 455.0
+offset_right = 840.0
+offset_bottom = 509.0
+theme_override_font_sizes/font_size = 24
+text = "ELEGIR NIVEL"
+
+[node name="Progreso" type="Label" parent="Interfaz/Menu" unique_id=1047513606]
+layout_mode = 0
+offset_top = 595.0
+offset_right = 1280.0
+offset_bottom = 645.0
+theme_override_font_sizes/font_size = 23
+horizontal_alignment = 1
+
+[node name="Ayuda" type="Label" parent="Interfaz/Menu" unique_id=757861079]
+layout_mode = 0
+offset_top = 655.0
+offset_right = 1280.0
+offset_bottom = 705.0
+theme_override_font_sizes/font_size = 20
+text = "Espacio, arriba, W o clic: saltar. Esc: pausa. R: reiniciar."
+horizontal_alignment = 1
+
+[node name="Selector" type="Control" parent="Interfaz" unique_id=1209173006]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+
+[node name="Oscurecer" type="ColorRect" parent="Interfaz/Selector" unique_id=1573143782]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+color = Color(0.05, 0.1, 0.11, 0.68)
+
+[node name="Titulo" type="Label" parent="Interfaz/Selector" unique_id=195381270]
+layout_mode = 0
+offset_top = 120.0
+offset_right = 1280.0
+offset_bottom = 185.0
+theme_override_font_sizes/font_size = 46
+text = "ELIGE TU LOBO"
+horizontal_alignment = 1
+
+[node name="VistaPrevia" type="TextureRect" parent="Interfaz/Selector" unique_id=395198395]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 230.0
+offset_right = 820.0
+offset_bottom = 500.0
+texture = ExtResource("2")
+
+[node name="Anterior" type="Button" parent="Interfaz/Selector" unique_id=176576303]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 340.0
+offset_right = 420.0
+offset_bottom = 394.0
+theme_override_font_sizes/font_size = 24
+text = "◀"
+
+[node name="Siguiente" type="Button" parent="Interfaz/Selector" unique_id=915717104]
+layout_mode = 0
+offset_left = 860.0
+offset_top = 340.0
+offset_right = 960.0
+offset_bottom = 394.0
+theme_override_font_sizes/font_size = 24
+text = "▶"
+
+[node name="Nombre" type="Label" parent="Interfaz/Selector" unique_id=1021032530]
+layout_mode = 0
+offset_top = 510.0
+offset_right = 1280.0
+offset_bottom = 575.0
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+
+[node name="Volver" type="Button" parent="Interfaz/Selector" unique_id=2031881120]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 590.0
+offset_right = 840.0
+offset_bottom = 644.0
+theme_override_font_sizes/font_size = 24
+text = "VOLVER"
+
+[node name="Pausa" type="Control" parent="Interfaz" unique_id=390382363]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+
+[node name="Oscurecer" type="ColorRect" parent="Interfaz/Pausa" unique_id=874008392]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+color = Color(0.05, 0.1, 0.11, 0.68)
+
+[node name="Titulo" type="Label" parent="Interfaz/Pausa" unique_id=27021502]
+layout_mode = 0
+offset_top = 220.0
+offset_right = 1280.0
+offset_bottom = 285.0
+theme_override_font_sizes/font_size = 55
+text = "PAUSA"
+horizontal_alignment = 1
+
+[node name="Continuar" type="Button" parent="Interfaz/Pausa" unique_id=487444923]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 340.0
+offset_right = 840.0
+offset_bottom = 394.0
+theme_override_font_sizes/font_size = 24
+text = "CONTINUAR"
+
+[node name="Reiniciar" type="Button" parent="Interfaz/Pausa" unique_id=224057839]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 410.0
+offset_right = 840.0
+offset_bottom = 464.0
+theme_override_font_sizes/font_size = 24
+text = "REINICIAR"
+
+[node name="Derrota" type="Control" parent="Interfaz" unique_id=1071631009]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+
+[node name="Oscurecer" type="ColorRect" parent="Interfaz/Derrota" unique_id=816398074]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+color = Color(0.05, 0.1, 0.11, 0.68)
+
+[node name="Titulo" type="Label" parent="Interfaz/Derrota" unique_id=1638403664]
+layout_mode = 0
+offset_top = 220.0
+offset_right = 1280.0
+offset_bottom = 285.0
+theme_override_font_sizes/font_size = 46
+text = "EL BOSQUE TE DETUVO"
+horizontal_alignment = 1
+
+[node name="Detalle" type="Label" parent="Interfaz/Derrota" unique_id=1860732874]
+layout_mode = 0
+offset_top = 330.0
+offset_right = 1280.0
+offset_bottom = 395.0
+theme_override_font_sizes/font_size = 26
+horizontal_alignment = 1
+
+[node name="Reintentar" type="Button" parent="Interfaz/Derrota" unique_id=190586355]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 430.0
+offset_right = 840.0
+offset_bottom = 484.0
+theme_override_font_sizes/font_size = 24
+text = "REINTENTAR"
+
+[node name="Victoria" type="Control" parent="Interfaz" unique_id=1328214028]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+
+[node name="Oscurecer" type="ColorRect" parent="Interfaz/Victoria" unique_id=1751738539]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+color = Color(0.05, 0.1, 0.11, 0.68)
+
+[node name="Titulo" type="Label" parent="Interfaz/Victoria" unique_id=1225108073]
+layout_mode = 0
+offset_top = 220.0
+offset_right = 1280.0
+offset_bottom = 285.0
+theme_override_font_sizes/font_size = 42
+text = "¡EL DESPERTAR COMPLETADO!"
+horizontal_alignment = 1
+
+[node name="Detalle" type="Label" parent="Interfaz/Victoria" unique_id=279796814]
+layout_mode = 0
+offset_top = 330.0
+offset_right = 1280.0
+offset_bottom = 395.0
+theme_override_font_sizes/font_size = 26
+horizontal_alignment = 1
+
+[node name="Repetir" type="Button" parent="Interfaz/Victoria" unique_id=990027123]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 430.0
+offset_right = 840.0
+offset_bottom = 484.0
+theme_override_font_sizes/font_size = 24
+text = "JUGAR DE NUEVO"
+
+[node name="HUD" type="Control" parent="Interfaz" unique_id=126362132]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 110.0
+mouse_filter = 2
+
+[node name="Barra" type="ProgressBar" parent="Interfaz/HUD" unique_id=1317358941]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 33.0
+offset_right = 1170.0
+offset_bottom = 45.0
+show_percentage = false
+
+[node name="Nivel" type="Label" parent="Interfaz/HUD" unique_id=1649145373]
+layout_mode = 0
+offset_top = 57.0
+offset_right = 1280.0
+offset_bottom = 122.0
+theme_override_font_sizes/font_size = 23
+text = "EL DESPERTAR"
+horizontal_alignment = 1
+
+[node name="Porcentaje" type="Label" parent="Interfaz/HUD" unique_id=11281524]
+layout_mode = 0
+offset_left = 1140.0
+offset_top = 57.0
+offset_right = 1240.0
+offset_bottom = 95.0
+theme_override_font_sizes/font_size = 23
+horizontal_alignment = 2
+
+[node name="Modo" type="Label" parent="Interfaz/HUD" unique_id=493542708]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 82.0
+offset_right = 820.0
+offset_bottom = 115.0
+theme_override_font_sizes/font_size = 19
+horizontal_alignment = 1
+
+[node name="Niveles" type="Control" parent="Interfaz" unique_id=399665353]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+
+[node name="Oscurecer" type="ColorRect" parent="Interfaz/Niveles" unique_id=1575229324]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+mouse_filter = 2
+color = Color(0.05, 0.1, 0.11, 0.68)
+
+[node name="Titulo" type="Label" parent="Interfaz/Niveles" unique_id=1118292660]
+layout_mode = 0
+offset_top = 130.0
+offset_right = 1280.0
+offset_bottom = 200.0
+theme_override_font_sizes/font_size = 48
+text = "ELIGE UN NIVEL"
+horizontal_alignment = 1
+
+[node name="Nivel1" type="Button" parent="Interfaz/Niveles" unique_id=531390256]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 265.0
+offset_right = 890.0
+offset_bottom = 325.0
+theme_override_font_sizes/font_size = 25
+text = "1  ·  EL DESPERTAR"
+
+[node name="Nivel2" type="Button" parent="Interfaz/Niveles" unique_id=725579786]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 345.0
+offset_right = 890.0
+offset_bottom = 405.0
+theme_override_font_sizes/font_size = 25
+text = "2  ·  LA CANTERA"
+
+[node name="Nivel3" type="Button" parent="Interfaz/Niveles" unique_id=1737546673]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 425.0
+offset_right = 890.0
+offset_bottom = 485.0
+theme_override_font_sizes/font_size = 25
+text = "3  ·  CIELO ELÉCTRICO"
+
+[node name="Volver" type="Button" parent="Interfaz/Niveles" unique_id=1269055159]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 560.0
+offset_right = 840.0
+offset_bottom = 614.0
+theme_override_font_sizes/font_size = 24
+text = "VOLVER"

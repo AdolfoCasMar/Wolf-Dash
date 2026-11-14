@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://portal.gd" id="1"]
+
+[node name="Portal" type="Node2D"]
+script = ExtResource("1")
+
+[node name="Anillo" type="Line2D" parent="."]
+points = PackedVector2Array(0, -110, 38, -100, 60, -60, 60, 0, 38, 40, 0, 50, -38, 40, -60, 0, -60, -60, -38, -100, 0, -110)
+width = 8.0
+default_color = Color(0.34, 0.89, 0.95, 1)
+
+[node name="Centro" type="Polygon2D" parent="."]
+color = Color(0.34, 0.89, 0.95, 0.22)
+polygon = PackedVector2Array(0, -103, 36, -92, 53, -58, 53, -2, 36, 33, 0, 43, -36, 33, -53, -2, -53, -58, -36, -92)
