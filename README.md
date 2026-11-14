@@ -1,5 +1,7 @@
 # Wolf Dash
 
+Descarga para Windows: https://github.com/AdolfoCasMar/Wolf-Dash/releases/download/v0.1.0/WolfDash.exe
+
 Proyecto editable para Godot 4. Abre `project.godot` en Godot y pulsa F5 para jugar. `main.tscn` contiene el cielo, los árboles, el suelo, el lobo, la nave, los portales, el primer nivel y las pantallas del menú. `nivel2.tscn` y `nivel3.tscn` contienen los otros dos niveles, con sus obstáculos y portales. Puedes seleccionar cada elemento y cambiar colores, formas, posiciones, textos y botones desde el Inspector. En el nodo raíz `WolfDash` puedes ajustar velocidad, gravedad, salto y los parámetros de la nave. Los portales son instancias editables de `portal.tscn`; su propiedad `Activar nave` determina si se entra o sale de ese modo.
 
 ## Controles
@@ -15,4 +17,3 @@ Hay tres niveles seleccionables: «El despertar», «La cantera» y «Cielo elé
 ## Física
 
 Cada bloque mide 48 píxeles. Velocidad horizontal: 420 px/s (8,75 bloques/s). Impulso vertical: 720 px/s. Gravedad: 2350 px/s². La parábola ideal alcanza 110,3 px (2,30 bloques) y 257,4 px (5,36 bloques) de recorrido horizontal. Es una aproximación jugable al cubo de Geometry Dash a velocidad normal, no una medición certificada ni una reproducción exacta de su física. El escenario está dibujado por código.
-
