@@ -6,6 +6,13 @@
 [ext_resource type="PackedScene" path="res://nivel2.tscn" id="4"]
 [ext_resource type="PackedScene" path="res://nivel3.tscn" id="5"]
 [ext_resource type="PackedScene" path="res://portal.tscn" id="6"]
+[ext_resource type="PackedScene" path="res://nivel4.tscn" id="7"]
+[ext_resource type="PackedScene" path="res://nivel5.tscn" id="8"]
+[ext_resource type="PackedScene" path="res://nivel6.tscn" id="9"]
+[ext_resource type="PackedScene" path="res://nivel7.tscn" id="10"]
+[ext_resource type="PackedScene" path="res://nivel8.tscn" id="11"]
+[ext_resource type="PackedScene" path="res://nivel9.tscn" id="12"]
+[ext_resource type="PackedScene" path="res://nivel10.tscn" id="13"]
 
 [sub_resource type="RectangleShape2D" id="spike"]
 size = Vector2(30, 27)
@@ -749,6 +756,27 @@ visible = false
 [node name="Nivel3" parent="Mundo" unique_id=449233376 instance=ExtResource("5")]
 visible = false
 
+[node name="Nivel4" parent="Mundo" instance=ExtResource("7")]
+visible = false
+
+[node name="Nivel5" parent="Mundo" instance=ExtResource("8")]
+visible = false
+
+[node name="Nivel6" parent="Mundo" instance=ExtResource("9")]
+visible = false
+
+[node name="Nivel7" parent="Mundo" instance=ExtResource("10")]
+visible = false
+
+[node name="Nivel8" parent="Mundo" instance=ExtResource("11")]
+visible = false
+
+[node name="Nivel9" parent="Mundo" instance=ExtResource("12")]
+visible = false
+
+[node name="Nivel10" parent="Mundo" instance=ExtResource("13")]
+visible = false
+
 [node name="Interfaz" type="CanvasLayer" parent="." unique_id=1676894077]
 
 [node name="Menu" type="Control" parent="Interfaz" unique_id=1051199996]
@@ -1089,36 +1117,92 @@ horizontal_alignment = 1
 
 [node name="Nivel1" type="Button" parent="Interfaz/Niveles" unique_id=531390256]
 layout_mode = 0
-offset_left = 390.0
-offset_top = 265.0
-offset_right = 890.0
-offset_bottom = 325.0
-theme_override_font_sizes/font_size = 25
+offset_left = 220.0
+offset_top = 245.0
+offset_right = 620.0
+offset_bottom = 300.0
+theme_override_font_sizes/font_size = 20
 text = "1  ·  EL DESPERTAR"
 
 [node name="Nivel2" type="Button" parent="Interfaz/Niveles" unique_id=725579786]
 layout_mode = 0
-offset_left = 390.0
-offset_top = 345.0
-offset_right = 890.0
-offset_bottom = 405.0
-theme_override_font_sizes/font_size = 25
+offset_left = 660.0
+offset_top = 245.0
+offset_right = 1060.0
+offset_bottom = 300.0
+theme_override_font_sizes/font_size = 20
 text = "2  ·  LA CANTERA"
 
 [node name="Nivel3" type="Button" parent="Interfaz/Niveles" unique_id=1737546673]
 layout_mode = 0
-offset_left = 390.0
-offset_top = 425.0
-offset_right = 890.0
-offset_bottom = 485.0
-theme_override_font_sizes/font_size = 25
+offset_left = 220.0
+offset_top = 315.0
+offset_right = 620.0
+offset_bottom = 370.0
+theme_override_font_sizes/font_size = 20
 text = "3  ·  CIELO ELÉCTRICO"
+
+[node name="Nivel4" type="Button" parent="Interfaz/Niveles"]
+offset_left = 660.0
+offset_top = 315.0
+offset_right = 1060.0
+offset_bottom = 370.0
+theme_override_font_sizes/font_size = 20
+text = "4  ·  LAS MINAS"
+
+[node name="Nivel5" type="Button" parent="Interfaz/Niveles"]
+offset_left = 220.0
+offset_top = 385.0
+offset_right = 620.0
+offset_bottom = 440.0
+theme_override_font_sizes/font_size = 20
+text = "5  ·  EL END"
+
+[node name="Nivel6" type="Button" parent="Interfaz/Niveles"]
+offset_left = 660.0
+offset_top = 385.0
+offset_right = 1060.0
+offset_bottom = 440.0
+theme_override_font_sizes/font_size = 20
+text = "6  ·  CIUDAD PROFUNDA"
+
+[node name="Nivel7" type="Button" parent="Interfaz/Niveles"]
+offset_left = 220.0
+offset_top = 455.0
+offset_right = 620.0
+offset_bottom = 510.0
+theme_override_font_sizes/font_size = 20
+text = "7  ·  BOSQUE NEVADO"
+
+[node name="Nivel8" type="Button" parent="Interfaz/Niveles"]
+offset_left = 660.0
+offset_top = 455.0
+offset_right = 1060.0
+offset_bottom = 510.0
+theme_override_font_sizes/font_size = 20
+text = "8  ·  DESIERTO ROJO"
+
+[node name="Nivel9" type="Button" parent="Interfaz/Niveles"]
+offset_left = 220.0
+offset_top = 525.0
+offset_right = 620.0
+offset_bottom = 580.0
+theme_override_font_sizes/font_size = 20
+text = "9  ·  OCÉANO ABISAL"
+
+[node name="Nivel10" type="Button" parent="Interfaz/Niveles"]
+offset_left = 660.0
+offset_top = 525.0
+offset_right = 1060.0
+offset_bottom = 580.0
+theme_override_font_sizes/font_size = 20
+text = "10  ·  PUERTA FINAL"
 
 [node name="Volver" type="Button" parent="Interfaz/Niveles" unique_id=1269055159]
 layout_mode = 0
 offset_left = 440.0
-offset_top = 560.0
+offset_top = 625.0
 offset_right = 840.0
-offset_bottom = 614.0
+offset_bottom = 679.0
 theme_override_font_sizes/font_size = 24
 text = "VOLVER"

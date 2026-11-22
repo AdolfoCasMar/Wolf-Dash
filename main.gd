@@ -26,9 +26,8 @@ const COLORES := [Color.WHITE, Color("e6e9e9"), Color("676c75"), Color("789278")
 var obstaculos: Node2D
 var portales: Node2D
 var nivel := 0
-var largos := [15000.0, 9500.0, 9500.0]
-var nombres_nivel := ["EL DESPERTAR", "LA CANTERA", "CIELO ELÉCTRICO"]
-var mejores := [0.0, 0.0, 0.0]
+var nombres_nivel := ["EL DESPERTAR", "LA CANTERA", "CIELO ELÉCTRICO", "LAS MINAS", "EL END", "CIUDAD PROFUNDA", "BOSQUE NEVADO", "DESIERTO ROJO", "OCÉANO ABISAL", "PUERTA FINAL"]
+var mejores := [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 var modo_nave := false
 var impulsando := false
 var siguiente_portal := 0
@@ -50,9 +49,9 @@ func _ready() -> void:
 	seleccionar_nivel(nivel)
 	ui.get_node("Menu/Jugar").pressed.connect(iniciar)
 	ui.get_node("Menu/ElegirNivel").pressed.connect(func(): cambiar_estado("niveles"))
-	ui.get_node("Niveles/Nivel1").pressed.connect(func(): seleccionar_e_iniciar(0))
-	ui.get_node("Niveles/Nivel2").pressed.connect(func(): seleccionar_e_iniciar(1))
-	ui.get_node("Niveles/Nivel3").pressed.connect(func(): seleccionar_e_iniciar(2))
+	for i in range(nombres_nivel.size()):
+		var indice := i
+		ui.get_node("Niveles/Nivel%d" % (i + 1)).pressed.connect(func(): seleccionar_e_iniciar(indice))
 	ui.get_node("Niveles/Volver").pressed.connect(func(): cambiar_estado("menu"))
 	ui.get_node("Menu/ElegirLobo").pressed.connect(func(): cambiar_estado("selector"))
 	ui.get_node("Selector/Anterior").pressed.connect(func(): cambiar_aspecto(-1))
@@ -110,20 +109,22 @@ func seleccionar_e_iniciar(indice: int) -> void:
 	iniciar()
 
 func seleccionar_nivel(indice: int) -> void:
-	nivel = clampi(indice, 0, 2)
-	longitud_nivel = largos[nivel]
+	nivel = clampi(indice, 0, nombres_nivel.size() - 1)
 	$Mundo/Obstaculos.visible = nivel == 0
 	$Mundo/Portales1.visible = nivel == 0
-	$Mundo/Nivel2.visible = nivel == 1
-	$Mundo/Nivel3.visible = nivel == 2
+	$Arboles.visible = nivel == 0
+	for i in range(2, nombres_nivel.size() + 1):
+		$Mundo.get_node("Nivel%d" % i).visible = nivel == i - 1
 	if nivel == 0:
+		longitud_nivel = 15000.0
 		obstaculos = $Mundo/Obstaculos
 		portales = $Mundo/Portales1
 		$Cielo.color = Color("87b8bd")
 		$Mundo/Suelo.color = Color("715237")
 		$Mundo/Hierba.color = Color("5f9b50")
 	else:
-		var escena: Node2D = $Mundo/Nivel2 if nivel == 1 else $Mundo/Nivel3
+		var escena: Node2D = $Mundo.get_node("Nivel%d" % (nivel + 1))
+		longitud_nivel = float(escena.get("largo"))
 		obstaculos = escena.get_node("Obstaculos")
 		portales = escena.get_node("Portales")
 		$Cielo.color = escena.color_cielo
@@ -189,7 +190,7 @@ func comprobar_colisiones(pie_anterior: float = INF) -> void:
 	var contorno := PackedVector2Array([caja.position, Vector2(caja.end.x, caja.position.y), caja.end, Vector2(caja.position.x, caja.end.y)])
 	for ob in obstaculos.get_children():
 		if absf(ob.position.x - px) > 140.0: continue
-		if ob.name.begins_with("Pincho") or ob.name.begins_with("Doble") or ob.name.begins_with("Triple"):
+		if ob.name.begins_with("Pincho") or ob.name.begins_with("Doble") or ob.name.begins_with("Triple") or ob.name.begins_with("Sierra") or ob.name.begins_with("Cristal"):
 			for punta in ob.get_children():
 				if punta is Polygon2D:
 					var triangulo := PackedVector2Array()
@@ -258,9 +259,9 @@ func cargar() -> void:
 	var datos = JSON.parse_string(FileAccess.get_file_as_string("user://progress.json"))
 	if datos is Dictionary:
 		mejor = float(datos.get("best", 0.0))
-		var guardados = datos.get("bests", [mejor, 0.0, 0.0])
-		if guardados is Array and guardados.size() == 3:
-			for i in range(3): mejores[i] = float(guardados[i])
-		nivel = clampi(int(datos.get("level", 0)), 0, 2)
+		var guardados = datos.get("bests", [mejor])
+		if guardados is Array:
+			for i in range(mini(guardados.size(), mejores.size())): mejores[i] = float(guardados[i])
+		nivel = clampi(int(datos.get("level", 0)), 0, nombres_nivel.size() - 1)
 		aspecto = clampi(int(datos.get("skin", 0)), 0, NOMBRES.size() - 1)
 		muertes = int(datos.get("deaths", 0))

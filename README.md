@@ -1,8 +1,8 @@
 # Wolf Dash
 
-Descarga para Windows: https://github.com/AdolfoCasMar/Wolf-Dash/releases/download/v0.1.0/WolfDash.exe
+Descarga para Windows: https://github.com/AdolfoCasMar/Wolf-Dash/releases/download/v0.2.0/WolfDash.exe
 
-Proyecto editable para Godot 4. Abre `project.godot` en Godot y pulsa F5 para jugar. `main.tscn` contiene el cielo, los árboles, el suelo, el lobo, la nave, los portales, el primer nivel y las pantallas del menú. `nivel2.tscn` y `nivel3.tscn` contienen los otros dos niveles, con sus obstáculos y portales. Puedes seleccionar cada elemento y cambiar colores, formas, posiciones, textos y botones desde el Inspector. En el nodo raíz `WolfDash` puedes ajustar velocidad, gravedad, salto y los parámetros de la nave. Los portales son instancias editables de `portal.tscn`; su propiedad `Activar nave` determina si se entra o sale de ese modo.
+Proyecto editable para Godot 4. Abre `project.godot` en Godot y pulsa F5 para jugar. `main.tscn` contiene el primer nivel, el lobo, la nave, los portales y los menús. Cada archivo `nivel2.tscn` a `nivel10.tscn` contiene un nivel adicional con su propia decoración, obstáculos y portales. Puedes seleccionar cada elemento y cambiar colores, formas, posiciones, textos y botones desde el Inspector. En el nodo raíz `WolfDash` puedes ajustar velocidad, gravedad, salto y los parámetros de la nave. Los portales son instancias editables de `portal.tscn`; su propiedad `Activar nave` determina si se entra o sale de ese modo.
 
 ## Controles
 
@@ -12,7 +12,7 @@ Proyecto editable para Godot 4. Abre `project.godot` en Godot y pulsa F5 para ju
 - R: reiniciar.
 - Flechas izquierda y derecha: elegir uno de nueve lobos en el selector.
 
-Hay tres niveles seleccionables: «El despertar», «La cantera» y «Cielo eléctrico». Incluyen pinchos simples, dobles y triples, cajas, pilares, sierras y obstáculos de techo. En el primer nivel se eliminó el pilar alto. Los pinchos usan la forma visible de cada triángulo para la colisión. En modo lobo se puede aterrizar y saltar encima de cajas y pilares; tocar sus lados o los pinchos mata. Los portales cambian temporalmente al modo nave y otro portal devuelve al modo lobo. El progreso por nivel, las muertes y el lobo elegido se guardan en `user://progress.json`. `wolf.png` y `nave.png` son las imágenes proporcionadas por el usuario; las nueve opciones aplican tintes al lobo.
+Hay diez niveles seleccionables: «El despertar», «La cantera», «Cielo eléctrico», «Las minas», «El End», «Ciudad profunda», «Bosque nevado», «Desierto rojo», «Océano abisal» y «Puerta final». Los siete niveles nuevos tienen decorados propios dibujados con formas editables; no incluyen recursos gráficos de Minecraft. Los obstáculos incluyen pinchos simples, dobles y triples, cajas, pilares, sierras, cristales y obstáculos de techo. En el primer nivel se eliminó el pilar alto. Los pinchos usan la forma visible de cada triángulo para la colisión. En modo lobo se puede aterrizar y saltar encima de cajas y pilares; tocar sus lados o los pinchos mata. Los portales cambian temporalmente al modo nave y otro portal devuelve al modo lobo. El progreso por nivel, las muertes y el lobo elegido se guardan en `user://progress.json`. `wolf.png` y `nave.png` son las imágenes proporcionadas por el usuario; las nueve opciones aplican tintes al lobo.
 
 ## Física
 

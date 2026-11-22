@@ -4,12 +4,17 @@ func _initialize() -> void:
 	call_deferred("verificar")
 
 func verificar() -> void:
+	var ruta_progreso := ProjectSettings.globalize_path("user://progress.json")
+	var habia_progreso := FileAccess.file_exists(ruta_progreso)
+	var progreso_original := FileAccess.get_file_as_string(ruta_progreso) if habia_progreso else ""
 	var juego = load("res://main.tscn").instantiate()
 	root.add_child(juego)
-	for i in range(3):
+	assert(juego.nombres_nivel.size() == 10)
+	for i in range(10):
 		juego.seleccionar_e_iniciar(i)
-		assert(juego.obstaculos.get_child_count() >= 20)
+		assert(juego.obstaculos.get_child_count() >= 12)
 		assert(juego.portales.get_child_count() >= 2)
+		assert(juego.longitud_nivel >= 6000.0)
 		juego.px = juego.portales.get_child(0).position.x + 1.0
 		juego.comprobar_portales()
 		assert(juego.modo_nave)
@@ -59,5 +64,10 @@ func verificar() -> void:
 			juego.py = juego.suelo_y - 35.0
 			juego.comprobar_colisiones()
 			assert(juego.estado == "derrota")
-	print("QA_OK: sin pilar alto ni colisión invisible en el primer nivel")
+	if habia_progreso:
+		var archivo := FileAccess.open(ruta_progreso, FileAccess.WRITE)
+		archivo.store_string(progreso_original)
+	else:
+		DirAccess.remove_absolute(ruta_progreso)
+	print("QA_OK: diez niveles, modos, obstáculos y progreso conservado")
 	quit()
